@@ -1,3 +1,5 @@
+'percobaan list method'
+
 def satu(param1, param2):
     print('ini satu ' + param1 )
     print(param2)
