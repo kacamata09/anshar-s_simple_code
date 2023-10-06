@@ -19,5 +19,22 @@ villain_2 = {
 
 list_villain = [villain, villain_1, villain_2]
 
-buff_villain = [{'power' : i['power'] + 1000, 'defense': i['defense'] + 2000, 'speed': i['speed'], 'buff': True} for i in list_villain]
-print(buff_villain)
+new_list_villain = [{'power' : i['power'] + 1000, 'defense': i['defense'] + 2000, 
+                 'speed': i['speed'], 'buff': True} for i in list_villain]
+print(new_list_villain)
+
+
+# menggunakan map()
+buff_villain = lambda i: {'power' : i['power'] + 1000, 
+                           'defense': i['defense'] + 2000, 
+                            'speed': i['speed'], 'buff': True, 'map': 'ya'}
+
+# def buff_villain_func(i):
+#     return {'power' : i['power'] + 1000, 
+#             'defense': i['defense'] + 2000, 
+#             'speed': i['speed'], 'buff': True, 'func': 'ya'}
+
+villain_reborn = list(map(buff_villain, list_villain))
+print(villain_reborn)
+
+
